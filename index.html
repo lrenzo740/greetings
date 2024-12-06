@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Before Work</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #87CEFA, #F0E68C);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .greeting {
+            font-size: 3rem;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #666;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .sun {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: sunBounce 4s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .cloud {
+            position: absolute;
+            top: 120px;
+            width: 200px;
+            height: 100px;
+            background: #FFF;
+            border-radius: 50%;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            animation: floatCloud 10s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .cloud.left {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .cloud.right {
+            left: 70%;
+            animation-delay: 5s;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: #FFF;
+            border-radius: 50%;
+        }
+
+        .cloud::before {
+            width: 150px;
+            height: 150px;
+            top: -50px;
+            left: 25px;
+        }
+
+        .cloud::after {
+            width: 100px;
+            height: 100px;
+            top: 20px;
+            left: -30px;
+        }
+
+        @keyframes sunBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(15px);
+            }
+        }
+
+        @keyframes floatCloud {
+            0% {
+                transform: translateX(-30px);
+            }
+            50% {
+                transform: translateX(30px);
+            }
+            100% {
+                transform: translateX(-30px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="cloud left"></div>
+    <div class="cloud right"></div>
+    <div class="container">
+        <h1 class="greeting">Good Morning!</h1>
+        <p class="message">Let's make this a productive and successful day!</p>
+    </div>
+</body>
+</html>
