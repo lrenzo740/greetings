@@ -1,142 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Morning Greeting</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to top, #ffefba, #ffffff);
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .greeting-container {
-            text-align: center;
-            position: relative;
-        }
-
-        .sun {
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, #ffcf33, #ff9e00);
-            border-radius: 50%;
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: sunrise 5s infinite alternate;
-        }
-
-        .clouds {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            margin-top: 60px;
-        }
-
-        .cloud {
-            width: 100px;
-            height: 50px;
-            background: #ffffff;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            animation: float 10s infinite ease-in-out;
-        }
-
-        .cloud::before,
-        .cloud::after {
-            content: '';
-            position: absolute;
-            background: #ffffff;
-            border-radius: 50%;
-        }
-
-        .cloud::before {
-            width: 60px;
-            height: 60px;
-            top: -20px;
-            left: 20px;
-        }
-
-        .cloud::after {
-            width: 70px;
-            height: 70px;
-            top: -30px;
-            left: 40px;
-        }
-
-        .greeting-text {
-            font-size: 3rem;
-            color: #ff6f61;
-            margin: 20px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        .subtext {
-            font-size: 1.5rem;
-            color: #555;
-            animation: fadeIn 4s ease-in-out;
-        }
-
-        @keyframes sunrise {
-            0% {
-                transform: translateX(-50%) translateY(0);
-            }
-            100% {
-                transform: translateX(-50%) translateY(-20px);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(20px);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+<title>gwapo ko</title>
+<style>
+p {
+text-align: center;
+font-size: 32px;
+font-family: Candara, Oswald;
+}
+img {
+display: block;
+margin: 0 auto;
+width: 25%;
+}
+</style>
 </head>
 <body>
-    <div class="greeting-container">
-        <div class="sun"></div>
-        <div class="clouds">
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-        </div>
-        <h1 class="greeting-text">Maayong buntag PAO!</h1>
-        <p class="subtext">Don't forget to paint that beautiful smile in your face!Charrr</p>
-    </div>
-    <script>
-        // Add interactive effects, like a sparkle or glow when text is hovered.
-        const greetingText = document.querySelector('.greeting-text');
+<p>Gwapo si Jan Lurence</p>
+<img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
+</body>
+<title>Gwapo ko</title>
+<style>
+#botao1 {
+position: fixed;
+top: 70%;
+left: 55%;
+transform: translate(-50%, -50%);
+}
+#botao2 {
+position: absolute;
+ left: 39%;
+  top: 68%;
+}
+</style>
+</head>
+<body>
+<button id="botao1">AGREEEEEEEE</button>
+<button id="botao2">dili</button>
+<script>
+const button2 = document.getElementById('botao2');
+let left = 40;
+button2.addEventListener('mouseover', function() {
+  if(left == 40){
+    left = 46;
+  }else{
+    left = 40;
+  }
+  this.style.left = left + '%';
+});
 
-        greetingText.addEventListener('mouseover', () => {
-            greetingText.style.textShadow = "0 0 20px #ffcf33, 0 0 40px #ff9e00";
-        });
+</script>
+<script>
+  document.getElementById('botao1').addEventListener('click', function() {
+      window.location.href = 'gif.html';
+  });
+</script>
 
-        greetingText.addEventListener('mouseout', () => {
-            greetingText.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.2)";
-        });
-    </script>
+
+</script>
 </body>
 </html>
